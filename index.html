@@ -7,20 +7,28 @@
 		<title>WKP6</title>
 		<style>
 			body {
+				background-color: rgb(233, 224, 207);
+				font-family: sans-serif;
+			}
+			h1 {
+				text-align: center;
+			}
+			main {
 				min-height: 100vh;
-				display: grid;
-				align-items: start;
+				display: flex;
+				/* align-items: start; */
 				justify-items: center;
 				line-height: 1.5;
 				margin: 0;
-				background-color: wheat;
-				font-family: sans-serif;
 			}
 			.container {
 				background: lightgray;
 				padding: 1rem;
 				border-radius: 5px;
 				width: 500px;
+				margin: 2rem; 
+				margin-right: auto;
+				margin-left: auto;
 			}
 			h2 {
 				text-align: center;
@@ -47,25 +55,39 @@
 	</head>
 	<body>
 		<header><h1>Hungry Student Restaurant</h1></header>
-		<div class="container">
-			<div class="card">
-				<h2>Food list</h2>
-				<div class="options">
-				  Filter by:
-				  <div class="spicy">
-				  <input type="checkbox">
-				  <label class="form-check-label">Spicy</label>
-				  </div>
-				  <div class="vegetarian">
-				  <input type="checkbox">
-				  <label class="form-check-label">Vegetarian</label>
-				  </div>
+		<main>
+			<div class="container">
+				<div class="card1">
+					<h2>Food list</h2>
+					<div class="options">
+					Filter by:
+					<div class="spicy">
+					<input type="checkbox">
+					<label class="form-check-label">Spicy</label>
+					</div>
+					<div class="vegetarian">
+					<input type="checkbox">
+					<label class="form-check-label">Vegetarian</label>
+					</div>
+					</div>
+					<ul class="card1_list">
+					
+					</ul>
 				</div>
-				<ul class="list">
-				  
-				</ul>
-			  </div>
-		</div>
+			</div>
+			<div class="container">
+				<div class="card2">
+					<h2>Your order</h2>
+					<ul class="card2_list">
+						<li class="list-item" id="${item.id}">
+							<h3>Ravitoto</h3>
+							<span>X1</span>
+							<span>300 AR</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
 		<script src="script.js"></script>
 	</body>
 </html>

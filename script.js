@@ -41,7 +41,7 @@ const foods = [
 ];
 
 // Get access to the ul element that has list class
-const list = document.querySelector('.list');
+const list = document.querySelector('.card1_list');
 
 // Map through the food lists and insert it into html 
 list.innerHTML = foods.map(item => 
