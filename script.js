@@ -47,8 +47,8 @@ const list = document.querySelector('.card1_list');
 list.innerHTML = foods.map(item => 
     `<li class="list-item" id="${item.id}">
         <h3>${item.title}</h3>
-        <span>${item.price}</span>
-        <button>Add</button>
+        <span>${item.price} AR</span>
+        <button class="add-btn">Add</button>
     </li>`
 ).join('');
 
@@ -68,8 +68,8 @@ allCheckboxes.forEach(checkbox => checkbox.addEventListener('change', e => {
         const bothFood = foodForVegetarianSpicy.map(food => `
         <li class="list-item" id="${food.id}">
             <h3>${food.title}</h3>
-            <span>${food.price}</span>
-            <button>Add</button>
+            <span>${food.price} AR</span>
+            <button class="add-btn">Add</button>
         </li>
         `).join('');
         list.innerHTML = bothFood;
@@ -80,8 +80,8 @@ allCheckboxes.forEach(checkbox => checkbox.addEventListener('change', e => {
         const hotFood = foodForHot.map(food =>`
         <li class="list-item" id="${food.id}">
             <h3>${food.title}</h3>
-            <span>${food.price}</span>
-            <button>Add</button>
+            <span>${food.price} AR</span>
+            <button class="add-btn">Add</button>
         </li>
         `).join('');
         list.innerHTML = hotFood;
@@ -92,8 +92,8 @@ allCheckboxes.forEach(checkbox => checkbox.addEventListener('change', e => {
         const vegetFood = foodForVegetarian.map(food => `
         <li class="list-item" id="${food.id}">
             <h3>${food.title}</h3>
-            <span>${food.price}</span>
-            <button>Add</button>
+            <span>${food.price} AR</span>
+            <button class="add-btn">Add</button>
         </li>
         `).join('');
         list.innerHTML = vegetFood;
@@ -103,12 +103,34 @@ allCheckboxes.forEach(checkbox => checkbox.addEventListener('change', e => {
         list.innerHTML = foods.map(item => 
             `<li class="list-item" id="${item.id}">
                 <h3>${item.title}</h3>
-                <span>${item.price}</span>
-                <button>Add</button>
+                <span>${item.price} AR</span>
+                <button class="add-btn">Add</button>
             </li>`
         ).join(''); 
     }
 }));
+
+// Add the choice to the order
+
+const secondCard = document.querySelector('.card2_list');
+const addBtns = document.querySelectorAll('.add-btn');
+
+const handleBtnClick = e => {
+    const button = e.currentTarget;
+    // select the closest parent with .list-item class
+    const listItem = button.closest('.list-item');
+    const id = listItem.querySelector('.list-item');
+    const title = listItem.querySelector('h3').textContent;
+    const totalPrice = listItem.querySelector('span').textContent;
+    secondCard.innerHTML =`
+    <li class="list-item" id="${id}">
+        <h3>${title}</h3>
+        <span>X1</span>
+        <span>${totalPrice}</span>
+	</li>`
+};
+
+addBtns.forEach(button => button.addEventListener('click', handleBtnClick));
     
 
 
