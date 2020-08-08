@@ -5,13 +5,52 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<title>WKP6</title>
+		<style>
+			body {
+				min-height: 100vh;
+				display: grid;
+				align-items: start;
+				justify-items: center;
+				line-height: 1.5;
+				margin: 0;
+				background-color: wheat;
+				font-family: sans-serif;
+			}
+			.container {
+				background: lightgray;
+				padding: 1rem;
+				border-radius: 5px;
+				width: 500px;
+			}
+			h2 {
+				text-align: center;
+				font-size: 2rem;
+				font-weight: 500;
+			}
+			.options {
+				display: flex;
+    			justify-content: space-around;
+			}
+			.list {
+				list-style: none;
+				display: flex;
+    			flex-direction: column;
+			}
+			.list-item {
+				display: grid;
+    			grid-template-columns: repeat(3, 1fr);
+			}
+			span, button {
+				margin: auto;
+			}
+		</style>
 	</head>
 	<body>
 		<header><h1>Hungry Student Restaurant</h1></header>
 		<div class="container">
 			<div class="card">
 				<h2>Food list</h2>
-				<div>
+				<div class="options">
 				  Filter by:
 				  <div class="spicy">
 				  <input type="checkbox">

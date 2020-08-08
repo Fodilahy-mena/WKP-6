@@ -45,7 +45,7 @@ const list = document.querySelector('.list');
 
 // Map through the food lists and insert it into html 
 list.innerHTML = foods.map(item => 
-    `<li id="${item.id}">
+    `<li class="list-item" id="${item.id}">
         <h3>${item.title}</h3>
         <span>${item.price}</span>
         <button>Add</button>
