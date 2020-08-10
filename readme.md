@@ -90,3 +90,30 @@ But this is just one way to think about that. Feel free to try any other logic y
 -   Don't forget to clean your code, and update your readme before Monday morning.
 
 Good luck!
+
+# Report
+
+## Structure of the subject
+
+1. Since *foods* is an array object, I used a map() method to loop through each one of them.
+
+2. That strategy is still used inside of *if* statement when enabling users to choose from two checkbox buttons.
+
+3. That's finished, I tried to add all the information from the food list to the order when clicking on each *add button* but my strategy doesn't worth it so I think I need another method to overcome this.
+
+## Areas in which my work should be improved if I the time wasn't the subject.
+
+1. To be sure, we don't have a lack of time but personally, my strategy to solve problems is very weak and that leads me to the slowness if I can say. For example, to get the html, css and the checkbox buttons work took me more than a half day. So I don't blame the time so I take it instead.
+
+2. I am not going to say if I had more time, (.....). Nop!. But I do say if I was able to accomplish each one steps in a short time I mean (if I was speed), I would at least finish importing all of the information from the `food list` card to the `order` card.
+
+## What I have learnt
+
+1. I noticed that `forEach` loop doesn't work when you want add something one at a time. So when I used it, it only adds one and change it into another one if I click another button.
+
+## Challenging and comments
+
+1. As I said, to get the heckbos buttons worked was already a straggle. But I don't know how hard the other steps because I didn't even get through them.
+
+2. Most importently, I need to hone my ***SPEED!***
+
